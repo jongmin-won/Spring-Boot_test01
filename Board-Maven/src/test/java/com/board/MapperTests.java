@@ -1,4 +1,5 @@
-package com.example.demo;
+package com.board;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,7 +8,8 @@ import com.board.domain.BoardDTO;
 import com.board.mapper.BoardMapper;
 
 @SpringBootTest
-public class MapperTests {
+class MapperTests {
+
 	@Autowired
 	private BoardMapper boardMapper;
 
@@ -21,4 +23,5 @@ public class MapperTests {
 		int result = boardMapper.insertBoard(params);
 		System.out.println("결과는 " + result + "입니다.");
 	}
+
 }

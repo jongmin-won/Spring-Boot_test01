@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
-
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -31,6 +30,13 @@ public class DBConfiguration {
 	@Bean
 	public DataSource dataSource() {
 		return new HikariDataSource(hikariConfig());
+		
+		//return DataSourceBuilder.create()
+		//	      .driverClassName("")
+		//	      .url("")
+		//	      .username("")
+		//	      .password("")
+		//	      .build(); 
 	}
 
 	@Bean
