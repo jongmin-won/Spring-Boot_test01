@@ -1,7 +1,6 @@
 package com.board.domain;
 
-import java.time.LocalDateTime;
-
+import java.sql.Date;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,8 +17,9 @@ public class BoardDTO {
 	private String noticeYn;	// 공지 여부
 	private String secretYn;	// 비밀 여부
 	private String deleteYn;	// 삭제 여부
-	private LocalDateTime insertTime;	// 등록일
-	private LocalDateTime updateTime;	// 수정일
-	private LocalDateTime deleteTime;	// 삭제일
+	//DTO의 LocalDateTime 타입은 DB 쪽의 타입과 맞지 않아 LocalDateTime -> DATE 타입으로 변경
+	private Date insertTime;	// 등록일
+	private Date updateTime;	// 수정일
+	private Date deleteTime;	// 삭제일
 
 }
