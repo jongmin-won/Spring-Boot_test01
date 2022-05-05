@@ -37,6 +37,8 @@ dependencies {
 
 	// CUBRID를 사용하기 위한 추가!
 	implementation group: 'cubrid', name: 'cubrid-jdbc', version: '10.2.3.8881'
+	// Thymeleaf Layout
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 }
 
 tasks.named('test') {
