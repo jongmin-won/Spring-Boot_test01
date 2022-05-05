@@ -16,4 +16,7 @@ public interface BoardMapper {
 
 	// 게시글 총 갯수
 	public int selectBoardTotalCount();
+	
+	// 게시글 조회
+	public BoardDTO selectBoardDetail(Long idx);
 }
