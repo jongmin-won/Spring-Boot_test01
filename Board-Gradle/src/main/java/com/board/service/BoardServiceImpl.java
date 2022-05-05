@@ -15,13 +15,22 @@ public class BoardServiceImpl implements BoardService{
 	@Autowired
 	private BoardMapper boardMapper;
 	
+	// 게시글 등록
 	@Override
 	public boolean registerBoard(BoardDTO params) {
 		int queryResult = 0;
 		
-		// 쿼리가 정상적으로 실행되면 1을 반환함.
-		queryResult = boardMapper.insertBoard(params);
+		// idx(인덱스)가 없다는 건, 아직 생성되지 않는 게시물이기 때문에,
+		// 게시물을 생성하는 쿼리 실행
+		if(params.getIdx() == null) {
+			queryResult = boardMapper.insertBoard(params);
+		} 
+		// idx(인덱스)가 있으면, 게시물이 존재하므로, 게시물을 수정하는 쿼리 실행
+		else {
+			queryResult = boardMapper.updateBoard(params);
+		}
 		
+		// 쿼리가 정상적으로 실행되면 1을 반환함.
 		// 정상적으로 실행되면 true, 아니면 false
 		return (queryResult == 1) ? true : false;
 	}
