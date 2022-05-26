@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.board.domain.BoardDTO;
 import com.board.mapper.BoardMapper;
 
-@SpringBootTest
+//@SpringBootTest
 class MapperTests {
 
 	@Autowired
