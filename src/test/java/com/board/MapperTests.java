@@ -9,7 +9,7 @@ import com.board.mapper.BoardMapper;
 
 //@SpringBootTest
 class MapperTests {
-
+/*
 	@Autowired
 	private BoardMapper boardMapper;
 
@@ -23,5 +23,5 @@ class MapperTests {
 		int result = boardMapper.insertBoard(params);
 		System.out.println("결과는 " + result + "입니다.");
 	}
-
+*/
 }
